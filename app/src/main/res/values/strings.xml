@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Zazor</string>
+    <string name="sign_in">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="account_not_found">Account not found</string>
+</resources>
