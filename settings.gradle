@@ -1,2 +1,2 @@
-include ':app'
-rootProject.name = "MVIStarter"
+include ':app', ':colorpicker'
+rootProject.name = "Zazor"

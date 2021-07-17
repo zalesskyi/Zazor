@@ -1,6 +1,6 @@
 package com.example.zazor.ui.media.di
 
-import com.example.zazor.ui.media.MediaFragment
+import com.example.zazor.ui.media.MediaActivity
 import com.example.zazor.ui.media.MediaViewModel
 import com.example.zazor.ui.media.MediaViewModelImpl
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -11,5 +11,5 @@ val mediaModule = module {
     viewModel { MediaViewModelImpl() }
 }
 
-fun MediaFragment.injectViewModel(): Lazy<MediaViewModel> =
+fun MediaActivity.injectViewModel(): Lazy<MediaViewModel> =
     lazy { getViewModel<MediaViewModelImpl>(null) }

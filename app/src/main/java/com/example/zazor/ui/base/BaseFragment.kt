@@ -10,21 +10,23 @@ import androidx.annotation.CallSuper
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.example.zazor.ui.main.MainCallback
+import com.example.zazor.ui.photo.PhotoCallback
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 abstract class BaseFragment<STATE : UiState, EVENT : UiEvent>(@LayoutRes private val layoutRes: Int) : Fragment() {
 
-    abstract fun observeState(state: STATE?)
-
     abstract val viewModel : BaseViewModel<STATE, EVENT>
 
-    protected var callback: MainCallback? = null
+    open val screenTitle: Int? = null
+
+    protected var callback: PhotoCallback? = null
+
+    abstract fun observeState(state: STATE?)
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        callback = context as? MainCallback
+        callback = context as? PhotoCallback
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
@@ -35,6 +37,7 @@ abstract class BaseFragment<STATE : UiState, EVENT : UiEvent>(@LayoutRes private
         lifecycleScope.launch {
             viewModel.uiState.collect(::observeState)
         }
+        viewModel.init()
     }
 
     override fun onPause() {
@@ -45,6 +48,12 @@ abstract class BaseFragment<STATE : UiState, EVENT : UiEvent>(@LayoutRes private
     override fun onDetach() {
         callback = null
         super.onDetach()
+    }
+
+    protected open fun navigateTo(fragment: Fragment, container: Int, addToBackStack: Boolean = false) {
+        childFragmentManager.beginTransaction().replace(container, fragment).apply {
+            if (addToBackStack) addToBackStack(fragment::class.simpleName)
+        }.commit()
     }
 
     private fun resetFlows() {

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "980746860553",
-    "project_id": "mitzvateme",
-    "storage_bucket": "mitzvateme.appspot.com"
+    "project_number": "616821918244",
+    "project_id": "zazor-b30b2",
+    "storage_bucket": "zazor-b30b2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:980746860553:android:709968c6d865a0ec04e0d8",
+        "mobilesdk_app_id": "1:616821918244:android:9fbb236cb244374fe066b1",
         "android_client_info": {
-          "package_name": "com.example.mvistarter"
+          "package_name": "com.example.zazor"
         }
       },
       "oauth_client": [
         {
-          "client_id": "980746860553-pm2350o10jbic11mc4q2q3jqt76c3134.apps.googleusercontent.com",
+          "client_id": "616821918244-bvr6bq0ptdnq0kt6oue55cv7km46gane.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBfxC-Cp9j3ip4Kqrf4zpD6LzE_8uDqnF0"
+          "current_key": "AIzaSyCFYfPeU1FPFoYfyN4qb3tOBArCsN_sx08"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "980746860553-pm2350o10jbic11mc4q2q3jqt76c3134.apps.googleusercontent.com",
+              "client_id": "616821918244-bvr6bq0ptdnq0kt6oue55cv7km46gane.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

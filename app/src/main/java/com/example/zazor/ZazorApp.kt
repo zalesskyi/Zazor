@@ -1,6 +1,7 @@
 package com.example.zazor
 
 import android.app.Application
+import com.example.zazor.data.storage.AppDatabaseCreator
 import com.google.firebase.FirebaseApp
 import com.example.zazor.di.DependencyInjection
 
@@ -10,5 +11,6 @@ class ZazorApp : Application() {
         super.onCreate()
         DependencyInjection.init(this)
         FirebaseApp.initializeApp(this)
+        AppDatabaseCreator.createDatabase(this)
     }
 }

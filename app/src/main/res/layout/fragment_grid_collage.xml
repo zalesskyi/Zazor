@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clCollagePreview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/flFirst"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@id/flThird"
+        app:layout_constraintEnd_toStartOf="@id/flSecond"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <io.fotoapparat.view.CameraView
+            android:id="@+id/cvFirst"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/ivFirst"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:rotation="90"
+            android:scaleType="centerInside"
+            android:scaleX="1.7"
+            android:scaleY="1.7"
+            android:adjustViewBounds="true"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/flSecond"
+        app:layout_constraintBottom_toTopOf="@id/flFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintStart_toEndOf="@id/flFirst"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <io.fotoapparat.view.CameraView
+            android:id="@+id/cvSecond"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/ivSecond"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@color/black"
+            android:rotation="90"
+            android:scaleType="centerInside"
+            android:scaleX="1.7"
+            android:scaleY="1.7"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/flThird"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/flFour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flFirst">
+
+        <io.fotoapparat.view.CameraView
+            android:id="@+id/cvThird"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/ivThird"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:rotation="90"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:scaleX="1.7"
+            android:scaleY="1.7"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/flFour"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flThird"
+        app:layout_constraintTop_toBottomOf="@id/flSecond">
+
+        <io.fotoapparat.view.CameraView
+            android:id="@+id/cvFour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/ivFour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:adjustViewBounds="true"
+            android:background="@color/black"
+            android:rotation="90"
+            android:scaleType="centerInside"
+            android:scaleX="1.7"
+            android:scaleY="1.7"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

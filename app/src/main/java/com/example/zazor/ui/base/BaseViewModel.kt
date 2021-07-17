@@ -1,5 +1,6 @@
 package com.example.zazor.ui.base
 
+import androidx.annotation.CallSuper
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
@@ -35,26 +36,28 @@ abstract class BaseViewModelImpl<STATE : UiState, EVENT : UiEvent> : ViewModel()
         }
     }
 
+    @CallSuper
     override fun init() {
         viewModelScope.launch(Dispatchers.IO) {
             uiState.value = initialState()
         }
     }
 
+    @CallSuper
     override fun sendEvent(event: EVENT?) {
         viewModelScope.launch {
             eventFlow.emit(event)
         }
     }
 
+    @CallSuper
     override fun reset() {
         sendEvent(null)
         uiState.value = null
     }
 
-    protected fun launch(remoteCall: suspend () -> Unit) {
+    protected fun launch(remoteCall: suspend () -> Unit) =
         viewModelScope.launch {
             remoteCall()
         }
-    }
 }

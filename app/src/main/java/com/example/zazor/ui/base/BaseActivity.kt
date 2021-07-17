@@ -3,8 +3,10 @@ package com.example.zazor.ui.base
 import android.os.Bundle
 import android.widget.Toast
 import androidx.annotation.LayoutRes
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.zazor.R
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
@@ -26,6 +28,12 @@ abstract class BaseActivity<STATE : UiState, EVENT : UiEvent>(@LayoutRes private
     override fun onPause() {
         resetFlows()
         super.onPause()
+    }
+
+    protected open fun navigateTo(fragment: Fragment, container: Int, addToBackStack: Boolean = false) {
+        supportFragmentManager.beginTransaction().replace(container, fragment).apply {
+            if (addToBackStack) addToBackStack(fragment::class.simpleName)
+        }.commit()
     }
 
     private fun showNoInternetError() {
