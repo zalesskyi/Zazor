@@ -111,7 +111,7 @@
             android:visibility="invisible"
             android:id="@+id/evDroidArt"/>
 
-        <com.example.zazor.views.DrawView
+        <com.gps.zazor.views.DrawView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:focusable="true"
@@ -119,49 +119,23 @@
             android:visibility="invisible"
             android:id="@+id/vDraw"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="36dp"
-            android:layout_marginBottom="75dp"
-            android:padding="16dp"
-            android:id="@+id/llNotesContainer"
-            android:visibility="invisible"
-            android:background="@drawable/bg_notes_photo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.7"
-            app:layout_constraintBottom_toBottomOf="parent">
+        <com.gps.zazor.views.NotesDragView
+            android:id="@+id/dvNotes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:id="@+id/tvLat"
-                tools:text="2423423234"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:id="@+id/tvLong"
-                tools:text="2423423234"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:id="@+id/tvDate"
-                tools:text="05.10.12"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:id="@+id/tvNote"
-                tools:text="2423423234"/>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tvTrial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/label"
+            android:lineHeight="32sp"
+            android:textSize="12sp"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:textColor="@color/black_20"
+            android:rotation="330"
+            android:gravity="center"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

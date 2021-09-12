@@ -12,7 +12,7 @@
         android:background="@color/black"
         tools:context=".ui.photo.PhotoActivity">
 
-        <com.example.zazor.views.NonSwipeableViewPager
+        <com.gps.zazor.views.NonSwipeableViewPager
             android:id="@+id/vpPhoto"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -72,12 +72,14 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.example.zazor.views.SmartTabsLayout
+            <com.gps.zazor.views.SmartTabsLayout
                 android:id="@+id/tlPhotos"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:clipToPadding="false"
                 android:paddingLeft="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:paddingRight="4dp"
                 app:layout_constraintTop_toBottomOf="@id/clCollageGrid"
                 app:stl_defaultTabTextColor="@color/tab_text_selector"

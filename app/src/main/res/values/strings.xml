@@ -2,18 +2,20 @@
     <string name="app_name">Zazor</string>
     <string name="photo">Фото</string>
     <string name="give_permission">Для дальнейшей работы, предоставьте разрешения</string>
-    <string name="notes">Заметки</string>
-    <string name="paint">Рисовать</string>
-    <string name="note">Заметка</string>
+    <string name="notes">Добавить заметку</string>
+    <string name="paint">Рисунок</string>
+    <string name="note">Текст заметки</string>
     <string name="cancel">Отмена</string>
     <string name="done">Готово</string>
     <string name="clear_all">Очистить все</string>
+    <string name="add_text">Добавить текст</string>
     <string name="font">Шрифт</string>
     <string name="panorama">Панорама</string>
     <string name="location_pattern">%s\n%s</string>
     <string name="pin_code_setting">Использовать пароль на вход</string>
     <string name="notes_setting">Заметки</string>
     <string name="clear_code_setting">Задать код очистки файлов</string>
+    <string name="use_trial_code">Использовать Trial-код</string>
 
     <string-array name="fonts">
         <item>Android default</item>
@@ -97,4 +99,24 @@
     <string name="settings">Настройки</string>
     <string name="welcome">Добро пожаловать в\n ZAZOR GPS</string>
     <string name="or">или</string>
+    <string name="auth_error">Неверный пин</string>
+    <string name="bio_auth_title">Вход с помощью биометрики</string>
+    <string name="bio_auth_subtitle">Введите биометрические данные, чтобы продолжить</string>
+    <string name="bio_auth_desc">Сканируйте отпечаток или FaceID, чтобы продолжить</string>
+    <string name="enter_pin">Введите ПИН-код</string>
+    <string name="pin_incorrect">Неверный ПИН</string>
+    <string name="code_incorrect">Неверный код очистки</string>
+    <string name="data_was_cleared">Ваши данные были удалены</string>
+    <string name="enter_clear_code">Введите код очистки</string>
+    <string name="display_coordinates">Отображать координаты</string>
+    <string name="display_date">Отображать дату</string>
+    <string name="display_time">Отображать время</string>
+    <string name="enter_trial_code">Введите код</string>
+    <string name="code_trial_incorrect">Неверный Trial-код</string>
+    <string name="label">Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor     Zazor</string>
+    <string name="removed">Фото удалено</string>
+    <string name="text">Введите текст</string>
+    <string name="collage_added">Коллаж создан. Используются координаты последнего фото.</string>
+    <string name="accuracy">Точность: %s m</string>
+    <string name="display_accuracy">Отображать погрешность</string>
 </resources>

@@ -16,12 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <io.fotoapparat.view.CameraView
-            android:id="@+id/cvFirst"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/black" />
-
         <ImageView
             android:id="@+id/ivFirst"
             android:layout_width="match_parent"
@@ -31,8 +25,15 @@
             android:scaleType="centerInside"
             android:scaleX="1.7"
             android:scaleY="1.7"
-            android:adjustViewBounds="true"
-            android:visibility="invisible" />
+            android:adjustViewBounds="true" />
+
+        <ImageView
+            android:id="@+id/ivMakeFirst"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_add_a_photo_24"
+            android:layout_height="wrap_content"
+            android:background="@color/black" />
 
     </FrameLayout>
 
@@ -46,13 +47,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/flFirst">
 
-        <io.fotoapparat.view.CameraView
-            android:id="@+id/cvFour"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/black"
-            />
-
         <ImageView
             android:id="@+id/ivFour"
             android:layout_width="match_parent"
@@ -63,8 +57,15 @@
             android:rotation="90"
             android:scaleType="centerInside"
             android:scaleX="1.7"
-            android:scaleY="1.7"
-            android:visibility="invisible" />
+            android:scaleY="1.7" />
+
+        <ImageView
+            android:id="@+id/ivMakeSecond"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_add_a_photo_24"
+            android:layout_height="wrap_content"
+            android:background="@color/black" />
 
     </FrameLayout>
 

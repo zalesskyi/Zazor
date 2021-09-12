@@ -22,7 +22,7 @@
             style="@style/Stromee.Widget.Design.TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/some_text"
+            android:hint="@string/text"
             android:labelFor="@id/etNote">
 
             <com.google.android.material.textfield.TextInputEditText

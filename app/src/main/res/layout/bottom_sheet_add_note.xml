@@ -63,6 +63,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/selector_paint"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="1"
         app:layout_constraintEnd_toStartOf="@id/ivText"

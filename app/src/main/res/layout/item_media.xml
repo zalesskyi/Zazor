@@ -1,9 +1,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/categoryCard"
+    android:id="@+id/cvPhoto"
     android:layout_width="match_parent"
-    android:layout_height="175dp"
+    android:layout_height="wrap_content"
+    android:minHeight="175dp"
+    android:background="@color/white"
     android:layout_marginVertical="8dp"
     app:cardCornerRadius="16dp"
     app:cardElevation="8dp">
@@ -11,7 +13,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/clPhoto"
         android:layout_margin="16dp">
+
+        <CheckBox
+            android:id="@+id/cbSelect"
+            android:layout_width="30dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvImage"
@@ -19,7 +32,7 @@
             android:layout_height="125dp"
             app:cardCornerRadius="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cbSelect"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -38,10 +51,10 @@
             android:textColor="@color/black"
             android:textSize="17sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivShare"
             app:layout_constraintStart_toEndOf="@id/cvImage"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="3 May 2021" />
+            tools:text="31 January 2021 year" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvAddress"
@@ -52,7 +65,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/tvDate"
             app:layout_constraintTop_toBottomOf="@id/tvDate"
-            tools:text="Zaporizhya" />
+            tools:text="Dnipropetrovsk distrinct, Dniproptrovsk, Lazaryana street, 22" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvLocation"
@@ -65,7 +78,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/tvAddress"
             app:layout_constraintTop_toBottomOf="@id/tvAddress"
-            tools:text="Zaporizhya" />
+            tools:text="25.2525325435345345, 23.234234234234" />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_share"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

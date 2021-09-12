@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zazor">
+    package="com.gps.zazor">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -25,11 +25,18 @@
         android:supportsRtl="true"
         android:hardwareAccelerated="true"
         android:largeHeap="true"
-        android:name="com.example.zazor.ZazorApp"
+        android:name=".ZazorApp"
         android:theme="@style/Theme.Chesed">
         <activity
-            android:name="com.example.zazor.ui.photo.PhotoActivity"
+            android:name=".ui.photo.PhotoActivity"
             android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".ui.photo.collage.photo.CollagePhotoActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.auth.AuthActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,6 +51,16 @@
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:screenOrientation="portrait"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
 
 </manifest>
